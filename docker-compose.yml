@@ -22,16 +22,16 @@ services:
       SHOW_CURSOR: 0
       LAUNCH_URL: http://192.168.86.32:1880/ui/
       # DISPLAY_NUM: 2
-  rhasspy:
-    image: "rhasspy/rhasspy"
-    container_name: rhasspy
-    restart: unless-stopped
-    volumes:
-       - 'profiles:/profiles'
-      #  - "/etc/localtime:/etc/localtime:ro"
-    ports:
-        - "12101:12101"
-    devices:
-        - "/dev/snd:/dev/snd"
-    command: --user-profiles /profiles --profile en
-    privileged: true
+  # rhasspy:
+  #   image: "rhasspy/rhasspy"
+  #   container_name: rhasspy
+  #   restart: unless-stopped
+  #   volumes:
+  #      - 'profiles:/profiles'
+  #     #  - "/etc/localtime:/etc/localtime:ro"
+  #   ports:
+  #       - "12101:12101"
+  #   devices:
+  #       - "/dev/snd:/dev/snd"
+  #   command: --user-profiles /profiles --profile en
+  #   privileged: true
